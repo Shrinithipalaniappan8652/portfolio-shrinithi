@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Pandi Portfolio</title>
+  <title>Shrinithi Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
@@ -15,18 +15,20 @@
 
     body {
       height: 100vh;
-      background: url('2.jpeg') no-repeat center center/cover;
-      background-size: cover;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      animation: fadeIn 1.5s ease-in-out;
+      color: white;
+      background: linear-gradient(45deg, #ff7e5f, #feb47b);
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
     }
 
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    @keyframes gradientAnimation {
+      0% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+      50% { background: linear-gradient(45deg, #ffacb7, #f6d02f); }
+      100% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
     }
 
     header {
@@ -187,13 +189,13 @@
   </style>
 </head>
 <body>
-  <header>Pandi Portfolio</header>
+  <header>Shrinithi Portfolio</header>
 
   <div class="profile-pic"></div>
 
   <div class="info">
-    <h2>Hi, I'm Pandi</h2>
-    <p>Welcome to my portfolio. Here you can explore my self-made projects with source code.</p>
+    <h2>Hi, I'm Shrinithi</h2>
+    <p>Welcome to my portfolio. Explore my creative work and projects!</p>
   </div>
 
   <div class="buttons">
