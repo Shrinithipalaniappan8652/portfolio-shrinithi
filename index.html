@@ -2,206 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shrinithi Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
     body {
-      height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #f3e7e9, #e3eeff, #d0f4de, #fde2e4);
+      background-size: 600% 600%;
+      animation: softAesthetic 20s ease infinite;
       display: flex;
-      flex-direction: column;
-      align-items: center;
       justify-content: center;
-      color: white;
-      background: linear-gradient(45deg, #ff7e5f, #feb47b);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      color: #333;
     }
 
-    @keyframes gradientAnimation {
-      0% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
-      50% { background: linear-gradient(45deg, #ffacb7, #f6d02f); }
-      100% { background: linear-gradient(45deg, #ff7e5f, #feb47b); }
+    @keyframes softAesthetic {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
-    header {
-      width: 100%;
+    .container {
       padding: 20px;
-      text-align: center;
-      font-size: 3rem;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      background: rgba(0, 0, 0, 0.4);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-      animation: slideDown 1s ease forwards;
-      border-bottom: 5px solid #00b4d8;
     }
 
-    @keyframes slideDown {
-      0% { opacity: 0; transform: translateY(-40px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    .profile-pic {
-      width: 200px;
-      height: 200px;
+    .circle {
+      width: 150px;
+      height: 150px;
       border-radius: 50%;
-      margin: 30px auto 20px;
-      background: url('10.jpeg') center/cover no-repeat;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
-      border: 5px solid #fff;
-      animation: popUp 1s ease-out forwards;
+      overflow: hidden;
+      margin: 20px auto;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
 
-    @keyframes popUp {
-      0% { transform: scale(0); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
+    .circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .info {
-      color: #fff;
-      text-align: center;
-      margin-bottom: 30px;
-      animation: fadeUp 1.2s ease-out forwards;
-    }
-
-    .info h2 {
-      font-size: 2rem;
-      font-weight: 600;
+    h1 {
+      font-size: 2.2em;
+      letter-spacing: 1px;
       margin-bottom: 10px;
+      animation: fadeIn 2s ease-in-out;
     }
 
-    .info p {
-      font-size: 1.2rem;
-      font-weight: 300;
-      line-height: 1.6;
-      margin-top: 10px;
-      color: rgba(255, 255, 255, 0.85);
+    h2 {
+      font-size: 1.4em;
+      margin: 10px 0;
+      animation: fadeIn 2.5s ease-in-out;
     }
 
-    @keyframes fadeUp {
-      0% { opacity: 0; transform: translateY(30px); }
-      100% { opacity: 1; transform: translateY(0); }
+    p {
+      font-size: 1em;
+      max-width: 300px;
+      margin: 0 auto 30px;
+      animation: fadeIn 3s ease-in-out;
     }
 
     .buttons {
       display: flex;
-      gap: 30px;
-      animation: fadeUp 1.5s ease-out forwards;
-      justify-content: center;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      animation: fadeIn 3.5s ease-in-out;
     }
 
     .buttons button {
-      padding: 15px 30px;
+      padding: 10px 30px;
       border: none;
-      border-radius: 40px;
+      border-radius: 30px;
+      font-size: 1em;
+      font-weight: bold;
+      color: white;
       cursor: pointer;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #fff;
-      background: #00b4d8;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      text-transform: uppercase;
-    }
-
-    .buttons button:nth-child(2) {
-      background: #ff4d6d;
-    }
-
-    .buttons button:nth-child(3) {
-      background: #8338ec;
+      width: 200px;
+      transition: transform 0.3s ease;
     }
 
     .buttons button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transform: scale(1.07);
     }
 
-    .buttons button:focus {
-      outline: none;
+    .about-btn {
+      background: linear-gradient(to right, #a18cd1, #fbc2eb);
     }
 
-    /* Responsive Design for smaller screens */
-    @media (max-width: 600px) {
-      header {
-        font-size: 2rem;
-        padding: 10px;
-      }
-
-      .profile-pic {
-        width: 150px;
-        height: 150px;
-      }
-
-      .info h2 {
-        font-size: 1.6rem;
-      }
-
-      .info p {
-        font-size: 1rem;
-      }
-
-      .buttons {
-        flex-direction: column;
-        gap: 20px;
-        align-items: center;
-      }
-
-      .buttons button {
-        width: 80%;
-        padding: 12px 20px;
-        font-size: 1rem;
-      }
+    .projects-btn {
+      background: linear-gradient(to right, #fda085, #f6d365);
     }
 
-    /* Additional media query for very small screens (mobile landscape) */
-    @media (max-width: 400px) {
-      header {
-        font-size: 1.8rem;
-      }
+    .contact-btn {
+      background: linear-gradient(to right, #84fab0, #8fd3f4);
+    }
 
-      .info h2 {
-        font-size: 1.4rem;
-      }
-
-      .info p {
-        font-size: 0.9rem;
-      }
-
-      .buttons button {
-        width: 100%;
-        padding: 12px;
-        font-size: 0.9rem;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <header>Shrinithi Portfolio</header>
-
-  <div class="profile-pic"></div>
-
-  <div class="info">
+  <div class="container">
+    <h1>SHRINITHI PORTFOLIO</h1>
+    <div class="circle">
+      <img src="ss.jpeg" alt="Profile Picture" />
+    </div>
     <h2>Hi, I'm Shrinithi</h2>
-    <p>Welcome to my portfolio. Explore my creative work and projects!</p>
-  </div>
-
-  <div class="buttons">
-    <button onclick="window.location.href='about.html'">About</button>
-    <button onclick="window.location.href='projects.html'">Projects</button>
-    <button onclick="window.location.href='contact.html'">Contact</button>
+    <p>Welcome to my portfolio. Here you can explore my self-made projects with source code.</p>
+    <div class="buttons">
+      <button class="about-btn">ABOUT</button>
+      <button class="projects-btn">PROJECTS</button>
+      <button class="contact-btn">CONTACT</button>
+    </div>
   </div>
 </body>
 </html>
